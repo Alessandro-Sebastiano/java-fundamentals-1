@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class FizzBuzz {
 
-    public static void  main(String[] arg){
+    public static void main(String[] arg) {
 
         int numOfIter;
 
@@ -12,20 +12,24 @@ public class FizzBuzz {
         System.out.println("Inserisci un numero da 1 a 999: ");
         numOfIter = Integer.parseInt(input.nextLine());
         input.close();
+        if (numOfIter > 0 && numOfIter < 1000) {
+            for (int i = 1; i <= numOfIter; i++) {
 
-        for (int i = 1; i <= numOfIter; i++) {
+                if (i % 3 != 0 && i % 5 != 0) {
+                    System.out.println(i);
+                }
 
-            if (i % 3 != 0 && i % 5 != 0) {
-                System.out.println(i);
+                if (i % 3 == 0 && i % 5 == 0) {
+                    System.out.println("FizzBuzz");
+                } else if (i % 3 == 0) {
+                    System.out.println("Fizz");
+                } else if (i % 5 == 0) {
+                    System.out.println("Buzz");
+                }
             }
 
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println("FizzBuzz");
-            } else if (i % 3 == 0) {
-                System.out.println("Fizz");
-            } else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            }
+        } else {
+            System.out.println("Inserire un numero valido");
         }
 
     }
