@@ -14,7 +14,7 @@ public class TrainTicket {
         Scanner input = new Scanner(System.in);
         System.out.print("Inserisci la distanza da percorrere in KM: ");
         distanceKm = Integer.parseInt(input.nextLine());
-        System.out.print("Inserisci la tua eta' : ");
+        System.out.print("Inserisci la tua età : ");
         age = Integer.parseInt(input.nextLine());
 
         double ticketPrice = distanceKm * kmPrice;
@@ -30,8 +30,8 @@ public class TrainTicket {
         }
 
         System.out.println("Distanza totale: " + distanceKm + " Km");
-        System.out.println("Eta passegero: " + age);
-        System.out.println("Il costo del biglietto e: $" + ticketPrice);
+        System.out.println("Età passegero: " + age);
+        System.out.println("Il costo del biglietto è: $" + ticketPrice);
 
     }
 
