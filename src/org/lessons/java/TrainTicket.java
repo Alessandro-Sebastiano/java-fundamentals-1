@@ -1,6 +1,7 @@
 package org.lessons.java;
 
 import java.sql.SQLOutput;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class TrainTicket {
@@ -29,9 +30,11 @@ public class TrainTicket {
             System.out.println("Non hai diritto allo sconto");
         }
 
+        DecimalFormat df =  new DecimalFormat("0.00");
+
         System.out.println("Distanza totale: " + distanceKm + " Km");
         System.out.println("Età passegero: " + age);
-        System.out.println("Il costo del biglietto è: $" + ticketPrice);
+        System.out.println("Il costo del biglietto è: $" + df.format(ticketPrice));
 
     }
 
