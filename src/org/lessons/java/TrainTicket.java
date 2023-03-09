@@ -1,12 +1,11 @@
 package org.lessons.java;
 
-import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class TrainTicket {
 
-    public static void main(String[] arg){
+    public static void main(String[] arg) {
 
         int distanceKm;
         int age;
@@ -20,17 +19,17 @@ public class TrainTicket {
 
         double ticketPrice = distanceKm * kmPrice;
 
-        if(age < 18){
+        if (age < 18) {
             ticketPrice -= (ticketPrice * 20) / 100;
             System.out.println("Hai diritto al 20% di sconto");
         } else if (age > 65) {
             ticketPrice -= (ticketPrice * 40) / 100;
             System.out.println("Hai diritto al 40% di sconto");
-        }else{
+        } else {
             System.out.println("Non hai diritto allo sconto");
         }
 
-        DecimalFormat df =  new DecimalFormat("0.00");
+        DecimalFormat df = new DecimalFormat("0.00");
 
         System.out.println("Distanza totale: " + distanceKm + " Km");
         System.out.println("Età passegero: " + age);
